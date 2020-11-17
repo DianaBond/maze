@@ -88,7 +88,7 @@ class hero{
 
 
 /* Вывод лабиринта */
-export function fieldOut(Lab) {
+export function fieldOut(Lab, hero) {
 
     document.body.write();
 
@@ -99,6 +99,9 @@ export function fieldOut(Lab) {
         for (let j = 0; j < Lab[i].length; j++) {
             let cellType = Lab[i][j];
             console.log(Lab[i][j]);
+            if (hero.x === i && hero.y === j){
+            cellType = 5;
+            }
             let div = visualization(cellType);
             rowConteiner.append(div);
         }
