@@ -66,32 +66,16 @@ export function visualization(cellType){
 }
 
 // Гениратор ходов человечка в лабиринте;
-// function Hero(x,y) {
-//     this.x =  x;
-//     this.y = y;
-//
-//     Hero.prototype.up = function () {this.y--};
-//     Hero.prototype.down = function () {this.y++};
-//     Hero.prototype.left = function () {this.x--};
-//     Hero.prototype.right = function () {this.x++};
-// }
-//
-// const user = new Hero()
-
-// class hero{
-//     constructor(x,y) {
-//         this.x = x;
-//         this.y = y;
-//     }
-// }
-// const Hero = new hero();
-// export function amaze(y, x, addBlockWalls) {
-//     fieldOut[y][x] = 'maze';
-//     document.getElementById(y + '-' + x).className = 'block';
-//     if (addBlockWalls && fieldOut(y + 1, x) && (fieldOut[y + 1][x] === 'wall')) fieldOut.push([y + 1, x, [y, x]]);
-//     if (addBlockWalls && fieldOut(y - 1, x) && (fieldOut[y - 1][x] === 'wall')) fieldOut.push([y - 1, x, [y, x]]);
-//     if (addBlockWalls && fieldOut(y, x + 1) && (fieldOut[y][x + 1] === 'wall')) fieldOut.push([y, x + 1, [y, x]]);
-//     if (addBlockWalls && fieldOut(y, x - 1) && (fieldOut[y][x - 1] === 'wall')) fieldOut.push([y, x - 1, [y, x]]);
+class hero{
+    constructor(x,y) {
+        this.x = x
+        this.y = y
+            .up = (this.y++)
+            .down = (this.y--)
+            .left = (this.x--)
+            .right = (this.x++)
+    }
+}
 
 
 /* Вывод лабиринта */
