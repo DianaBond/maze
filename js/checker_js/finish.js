@@ -1,7 +1,9 @@
 export function checker(Maze,x,y) {
     if (Maze[x][y] === 2) {
-        return true;
+        alert("YOU WIN");
     } else {
-        return false;
+
     }
 }
+
+

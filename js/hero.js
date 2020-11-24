@@ -1,19 +1,94 @@
-export class hero{
+import { Maze } from "./js3.js";
+
+
+let n = 20;
+let m = 20;
+let check = Maze(n,m)
+export class Hero{
     constructor(x,y) {
         this.x = x;
-        this.y = y
+        this.y = y;
 
     }
     up() {
-        this.y++;
+        let x = this.x;
+        let y = this.y;
+        if (check[x-1][y] === 0)
+        {
+
+        }
+        else if(check[x-1][y] === 2)
+
+        {
+            this.x--;
+            alert("YOU WIN");
+            return 0;
+        }
+        else
+        {
+            this.x--;
+        }
+
     }
-    down(){
-        this.y--;
+    down() {
+       let x = this.x;
+        let y = this.y;
+
+        if (check[x+1][y] === 0)
+        {
+
+        }
+
+        else if(check[x+1][y] === 2)
+
+        {
+            this.x++;
+            alert("YOU WIN");
+            return 0;
+        }
+        else
+        {
+            this.x++;
+
+        }
+
     }
-    left(){
-        this.x--;
+    left() {
+        let x = this.x;
+        let y = this.y;
+        if (check[x][y-1] === 0 || y-1<0)
+        {
+
+        }
+        else if(check[x][y-1] === 2)
+
+        {
+            this.y--;
+            alert("YOU WIN");
+            return 0;
+        }
+        else
+        {
+            this.y--;
+        }
     }
-    right(){
-        this.x++
+    right() {
+        let x = this.x;
+        let y = this.y;
+        if (check[x][y+1] === 0 || y+1>=n)
+        {
+
+        }
+        else if(check[x][y+1] === 2)
+
+        {
+            this.y++;
+            alert("YOU WIN");
+            return 0;
+        }
+        else
+        {
+            this.y++;
+        }
     }
 }
